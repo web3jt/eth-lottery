@@ -33,9 +33,9 @@ def touch(block_number):
 
     if rows[index] not in output:
         output.append(rows[index])
-        log(' #{} - {} % {} = {} :: {}'.format(block_number, block_hash, PICK_OUT, index_str, rows[index]))
+        log(' #{} - {} % {} = {} :: {}'.format(block_number, block_hash, len(rows), index_str, rows[index]))
     else:
-        log(' #{} - {} % {} = {}'.format(block_number, block_hash, PICK_OUT, index_str))
+        log(' #{} - {} % {} = {}'.format(block_number, block_hash, len(rows), index_str))
 
 
 if __name__ == '__main__':
@@ -78,7 +78,7 @@ if __name__ == '__main__':
     log('\n--- Pick {} from {} ---'.format(PICK_OUT, length))
     log('\nWrite `output.txt`:')
 
-    i = 1
+    i = 0
     while len(output) < PICK_OUT:
         nonce = START_BLOCK + i
         touch(nonce)
