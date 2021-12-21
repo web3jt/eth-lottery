@@ -36,6 +36,7 @@ $ lottery.py -n <block-number> -p <pick-out>
 ```
 
 For example:
+
 ```bash
 $ lottery.py -n 12345678 -p 10
 #
@@ -79,9 +80,10 @@ $ lottery.py -n 12345678 -p 10
 
 ## Then
 
-You will get `./data/output.txt` and `./data/log.txt`
+You will get a `./data/output.txt` and a `./data/log.txt`
 
-`./data/output.txt`:
+`./data/output.txt`
+
 ```text
 amet
 cursus
