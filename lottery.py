@@ -19,6 +19,11 @@ def exit_with_help():
     sys.exit()
 
 
+def log(s):
+    lines.append(s)
+    print(s)
+
+
 def touch(block_number):
     block = web3.eth.get_block(block_number)
     block_hash = block.hash.hex()
@@ -28,18 +33,9 @@ def touch(block_number):
 
     if rows[index] not in output:
         output.append(rows[index])
-        line = ' #{} - {} % {} = {} :: {}'.format(block_number, block_hash, PICK_OUT, index_str, rows[index])
-        lines.append(line)
-        print(line)
+        log(' #{} - {} % {} = {} :: {}'.format(block_number, block_hash, PICK_OUT, index_str, rows[index]))
     else:
-        line = ' #{} - {} % {} = {}'.format(block_number, block_hash, PICK_OUT, index_str)
-        lines.append(line)
-        print(line)
-
-
-def log(s):
-    lines.append(s)
-    print(s)
+        log(' #{} - {} % {} = {}'.format(block_number, block_hash, PICK_OUT, index_str))
 
 
 if __name__ == '__main__':
