@@ -38,6 +38,7 @@ $ lottery.py -n <block-number> -p <pick-out>
 For example:
 ```bash
 $ lottery.py -n 12345678 -p 10
+#
 # Read `input.txt`:
 #  ... lorem
 #  ... ipsum
