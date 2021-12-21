@@ -78,8 +78,8 @@ if __name__ == '__main__':
     log('\n--- Pick {} from {} ---'.format(PICK_OUT, length))
     log('\nWrite `output.txt`:')
 
-    i = 0
-    while i < PICK_OUT:
+    i = 1
+    while len(output) < PICK_OUT:
         nonce = START_BLOCK + i
         touch(nonce)
         i += 1
